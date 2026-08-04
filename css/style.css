@@ -278,7 +278,7 @@ h2 {
 	inset: 0;
 	background-image:
 		linear-gradient(to right, rgba(10, 10, 16, 0.92) 0%, rgba(10, 10, 16, 0.72) 45%, rgba(10, 10, 16, 0.35) 100%),
-		url('../media/ph-hero.svg');
+		url('../media/hero.webp');
 	background-size: cover;
 	background-position: center;
 	pointer-events: none;
@@ -1026,6 +1026,13 @@ h2 {
 
 	.hero {
 		padding: 8.5rem 1.25rem 4rem;
+	}
+
+	/* na telefonie boks hero jest pionowy — szeroki kadr pokazałby wąski pasek */
+	.hero-bg {
+		background-image:
+			linear-gradient(to bottom, rgba(10, 10, 16, 0.88) 0%, rgba(10, 10, 16, 0.7) 55%, rgba(10, 10, 16, 0.45) 100%),
+			url('../media/hero-mobile.webp');
 	}
 
 	.fab-wrapper {
