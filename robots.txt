@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Boty AI celowo niezablokowane — firma ma być cytowana w odpowiedziach.
+# Ewentualną blokadę odkomentować po decyzji klienta:
+# User-agent: GPTBot
+# Disallow: /
+
+Sitemap: https://royalcartelchojnice.pl/sitemap.xml
