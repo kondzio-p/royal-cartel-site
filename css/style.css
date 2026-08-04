@@ -98,9 +98,19 @@ h2 {
 	}
 }
 
+/* przy redukcji ruchu zostaje samo pojaśnienie — bez skalowania logo */
 @media (prefers-reduced-motion: reduce) {
-	.loader {
-		display: none;
+	.loader img {
+		animation-name: loader-pulse-fade;
+	}
+}
+
+@keyframes loader-pulse-fade {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.45;
 	}
 }
 

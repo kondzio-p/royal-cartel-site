@@ -83,43 +83,45 @@ try {
 
 	var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-	if (!reduced) {
-		// hero czeka, aż zniknie ekran ładowania (czasy w .loader w style.css)
-		var heroDelay = document.getElementById('loader') ? 2 : 0;
-		gsap.from('.hero-text > *', {
+	// przy redukcji ruchu elementy nadal się pojawiają, ale bez jazdy po osi Y
+	var shift = reduced ? 0 : 34;
+	var dur = reduced ? 0.45 : 0.8;
+
+	// hero czeka, aż zniknie ekran ładowania (czasy w .loader w style.css)
+	var heroDelay = document.getElementById('loader') ? 2 : 0;
+	gsap.from('.hero-text > *', {
+		opacity: 0,
+		y: shift,
+		duration: dur + 0.1,
+		delay: heroDelay,
+		ease: 'power3.out',
+		stagger: 0.12
+	});
+
+	// wjazdy sekcji: nagłówki, kafle, karty — każda grupa na własnym triggerze
+	[
+		{ trigger: '.counters', targets: '.counter' },
+		{ trigger: '#o-nas', targets: '#o-nas .eyebrow, #o-nas .o-nas-grid > *' },
+		{ trigger: '#jak-pracujemy', targets: '#jak-pracujemy .eyebrow, #jak-pracujemy h2' },
+		{ trigger: '#jak-pracujemy .steps', targets: '.step' },
+		{ trigger: '.realizacje', targets: '.realizacje-title' },
+		{ trigger: '.realizacje-grid', targets: '.realizacje-grid figure' },
+		{ trigger: '#cennik', targets: '#cennik .eyebrow, #cennik h2, #cennik .section-lead' },
+		{ trigger: '.price-grid', targets: '.price-card' },
+		{ trigger: '.extra-services', targets: '.extra-services h3' },
+		{ trigger: '.extra-grid', targets: '.extra-card' },
+		{ trigger: '#kontakt', targets: '#kontakt .eyebrow, #kontakt h2' },
+		{ trigger: '#kontakt .kontakt-grid', targets: '#kontakt .kontakt-grid > *' }
+	].forEach(function (cfg) {
+		gsap.from(cfg.targets, {
+			scrollTrigger: { trigger: cfg.trigger, start: 'top 80%', once: true },
 			opacity: 0,
-			y: 34,
-			duration: 0.9,
-			delay: heroDelay,
+			y: shift,
+			duration: dur,
 			ease: 'power3.out',
 			stagger: 0.12
 		});
-
-		// wjazdy sekcji: nagłówki, kafle, karty — każda grupa na własnym triggerze
-		[
-			{ trigger: '.counters', targets: '.counter' },
-			{ trigger: '#o-nas', targets: '#o-nas .eyebrow, #o-nas .o-nas-grid > *' },
-			{ trigger: '#jak-pracujemy', targets: '#jak-pracujemy .eyebrow, #jak-pracujemy h2' },
-			{ trigger: '#jak-pracujemy .steps', targets: '.step' },
-			{ trigger: '.realizacje', targets: '.realizacje-title' },
-			{ trigger: '.realizacje-grid', targets: '.realizacje-grid figure' },
-			{ trigger: '#cennik', targets: '#cennik .eyebrow, #cennik h2, #cennik .section-lead' },
-			{ trigger: '.price-grid', targets: '.price-card' },
-			{ trigger: '.extra-services', targets: '.extra-services h3' },
-			{ trigger: '.extra-grid', targets: '.extra-card' },
-			{ trigger: '#kontakt', targets: '#kontakt .eyebrow, #kontakt h2' },
-			{ trigger: '#kontakt .kontakt-grid', targets: '#kontakt .kontakt-grid > *' }
-		].forEach(function (cfg) {
-			gsap.from(cfg.targets, {
-				scrollTrigger: { trigger: cfg.trigger, start: 'top 80%', once: true },
-				opacity: 0,
-				y: 34,
-				duration: 0.8,
-				ease: 'power3.out',
-				stagger: 0.12
-			});
-		});
-	}
+	});
 
 	// countery liczą zawsze — zatrzymany wskaźnik gubi informację
 	document.querySelectorAll('[data-count]').forEach(function (el) {
