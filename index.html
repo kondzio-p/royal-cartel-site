@@ -58,7 +58,18 @@
 
 		<link rel="stylesheet" href="css/style.css" />
 		<!-- zdjęcie hero jest tłem w CSS, preload zastępuje fetchpriority z <img> -->
-		<link rel="preload" as="image" href="media/ph-hero.svg" />
+		<link
+			rel="preload"
+			as="image"
+			href="media/hero.webp"
+			media="(min-width: 721px)"
+		/>
+		<link
+			rel="preload"
+			as="image"
+			href="media/hero-mobile.webp"
+			media="(max-width: 720px)"
+		/>
 
 		<script type="application/ld+json">
 			{
@@ -508,8 +519,8 @@
 						<div class="realizacje-grid">
 							<figure>
 								<img
-									src="media/ph-realizacja-1.svg"
-									alt="Realizacja Royal Cartel — auto po myciu kompletnym"
+									src="media/realizacja-1.webp"
+									alt="Panel drzwi Mercedesa z podświetleniem ambient po czyszczeniu wnętrza"
 									width="800"
 									height="1000"
 									loading="lazy"
@@ -517,8 +528,8 @@
 							</figure>
 							<figure>
 								<img
-									src="media/ph-realizacja-2.svg"
-									alt="Realizacja Royal Cartel — wnętrze po praniu tapicerki"
+									src="media/realizacja-2.webp"
+									alt="Biała Skoda Superb kombi po myciu kompletnym w myjni Royal Cartel"
 									width="800"
 									height="1000"
 									loading="lazy"
@@ -526,8 +537,8 @@
 							</figure>
 							<figure>
 								<img
-									src="media/ph-realizacja-3.svg"
-									alt="Realizacja Royal Cartel — lakier po korekcie"
+									src="media/realizacja-3.webp"
+									alt="Białe BMW serii 4 Gran Coupe po korekcie lakieru"
 									width="800"
 									height="1000"
 									loading="lazy"
@@ -535,8 +546,8 @@
 							</figure>
 							<figure>
 								<img
-									src="media/ph-realizacja-4.svg"
-									alt="Realizacja Royal Cartel — skórzana tapicerka po czyszczeniu"
+									src="media/realizacja-4.webp"
+									alt="Czarne Mercedes CLE coupe po detailingu karoserii"
 									width="800"
 									height="1000"
 									loading="lazy"
@@ -544,8 +555,8 @@
 							</figure>
 							<figure>
 								<img
-									src="media/ph-realizacja-5.svg"
-									alt="Realizacja Royal Cartel — felga po renowacji"
+									src="media/realizacja-5.webp"
+									alt="Czarne Audi Q3 Sportback po myciu i pielęgnacji lakieru"
 									width="800"
 									height="1000"
 									loading="lazy"
@@ -553,8 +564,8 @@
 							</figure>
 							<figure>
 								<img
-									src="media/ph-realizacja-6.svg"
-									alt="Realizacja Royal Cartel — auto po detailingu"
+									src="media/realizacja-6.webp"
+									alt="Wnętrze Mercedesa po praniu tapicerki i czyszczeniu plastików"
 									width="800"
 									height="1000"
 									loading="lazy"
