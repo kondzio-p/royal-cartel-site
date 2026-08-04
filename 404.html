@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>404 — Nie znaleziono strony | Royal Cartel Car Art</title>
+	<meta name="robots" content="noindex">
+	<!-- czas przekierowania: zmieniaj w trzech miejscach — meta, animacja paska, licznik JS -->
+	<meta http-equiv="refresh" content="8; url=/">
+	<link rel="icon" href="/media/favicon.png" type="image/png">
+	<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		body {
+			background: #0a0a10;
+			color: #f2f2f6;
+			font-family: 'Segoe UI', system-ui, sans-serif;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			text-align: center;
+			padding: 2rem;
+		}
+		.code {
+			font-size: clamp(5rem, 18vw, 9rem);
+			font-weight: 800;
+			line-height: 1;
+			color: #ff2d7d;
+			text-shadow: 0 0 40px rgba(255, 45, 125, 0.45);
+		}
+		h1 { font-size: 1.4rem; margin: 1rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+		p { color: #9a9aa8; }
+		a.btn {
+			display: inline-block;
+			margin-top: 1.75rem;
+			background: #ff2d7d;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			padding: 0.85rem 1.6rem;
+			border-radius: 6px;
+		}
+		.bar {
+			margin: 2rem auto 0;
+			width: min(320px, 80vw);
+			height: 3px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 3px;
+			overflow: hidden;
+		}
+		.bar i {
+			display: block;
+			height: 100%;
+			background: #29d9ff;
+			animation: countdown 8s linear forwards;
+		}
+		@keyframes countdown { from { width: 100%; } to { width: 0; } }
+		.sec { font-variant-numeric: tabular-nums; color: #29d9ff; }
+	</style>
+</head>
+<body>
+	<div>
+		<p class="code">404</p>
+		<h1>Ta strona nie istnieje</h1>
+		<p>Za <span class="sec" id="sec">8</span> s zabierzemy Cię na stronę główną.</p>
+		<a class="btn" href="/">Wróć na stronę główną</a>
+		<div class="bar" aria-hidden="true"><i></i></div>
+	</div>
+	<script>
+		var s = 8;
+		var el = document.getElementById('sec');
+		var t = setInterval(function () {
+			s--;
+			if (s <= 0) { clearInterval(t); s = 0; }
+			el.textContent = s;
+		}, 1000);
+	</script>
+</body>
+</html>
