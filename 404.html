@@ -3,9 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>404 — Nie znaleziono strony | Royal Cartel Car Art</title>
+	<title>404 – Nie znaleziono strony | Royal Cartel Car Art</title>
 	<meta name="robots" content="noindex">
-	<!-- czas przekierowania: zmieniaj w trzech miejscach — meta, animacja paska, licznik JS -->
 	<meta http-equiv="refresh" content="8; url=/">
 	<link rel="icon" href="/media/favicon.png" type="image/png">
 	<style>
@@ -66,12 +65,12 @@
 		<div class="bar" aria-hidden="true"><i></i></div>
 	</div>
 	<script>
-		var s = 8;
 		var el = document.getElementById('sec');
-		var t = setInterval(function () {
-			s--;
-			if (s <= 0) { clearInterval(t); s = 0; }
-			el.textContent = s;
+		var left = parseInt(el.textContent, 10);
+		var tick = setInterval(function () {
+			left--;
+			if (left <= 0) { clearInterval(tick); left = 0; }
+			el.textContent = left;
 		}, 1000);
 	</script>
 </body>

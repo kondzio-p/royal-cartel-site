@@ -4,11 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>
-			Royal Cartel Car Art — Auto Detailing i Ręczna Myjnia | Chojnice
+			Royal Cartel Car Art – Auto Detailing i Ręczna Myjnia | Chojnice
 		</title>
 		<meta
 			name="description"
-			content="Royal Cartel Car Art Chojnice — ręczna myjnia, auto detailing, pranie tapicerki, korekta lakieru, wulkanizacja, renowacja felg, wynajem busów i pomoc drogowa. Ul. Kaszubska 1, tel. 730 255 325."
+			content="Royal Cartel Car Art Chojnice – ręczna myjnia, auto detailing, pranie tapicerki, korekta lakieru, wulkanizacja, renowacja felg, wynajem busów i pomoc drogowa. Ul. Kaszubska 1, tel. 730 255 325."
 		/>
 		<meta
 			name="robots"
@@ -21,7 +21,7 @@
 		<meta property="og:site_name" content="Royal Cartel Car Art" />
 		<meta
 			property="og:title"
-			content="Royal Cartel Car Art — Auto Detailing i Ręczna Myjnia | Chojnice"
+			content="Royal Cartel Car Art – Auto Detailing i Ręczna Myjnia | Chojnice"
 		/>
 		<meta
 			property="og:description"
@@ -32,10 +32,16 @@
 			property="og:image"
 			content="https://royalcartelchojnice.pl/media/og-image.jpg"
 		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta
+			property="og:image:alt"
+			content="Royal Cartel Car Art – auto detailing i ręczna myjnia w Chojnicach"
+		/>
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta
 			name="twitter:title"
-			content="Royal Cartel Car Art — Auto Detailing i Ręczna Myjnia | Chojnice"
+			content="Royal Cartel Car Art – Auto Detailing i Ręczna Myjnia | Chojnice"
 		/>
 		<meta
 			name="twitter:description"
@@ -52,12 +58,11 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 
 		<link rel="stylesheet" href="css/style.css" />
-		<!-- zdjęcie hero jest tłem w CSS, preload zastępuje fetchpriority z <img> -->
 		<link
 			rel="preload"
 			as="image"
@@ -76,12 +81,15 @@
 				"@context": "https://schema.org",
 				"@graph": [
 					{
-						"@type": "AutoWash",
+						"@type": ["AutoWash", "AutoRepair"],
 						"@id": "https://royalcartelchojnice.pl/#firma",
 						"name": "Royal Cartel Car Art",
 						"description": "Ręczna myjnia i studio auto detailingu w Chojnicach. Mycie kompleksowe, pranie tapicerki, czyszczenie skór, korekta lakieru, wulkanizacja, renowacja felg, wynajem busów dostawczych i pomoc drogowa.",
 						"url": "https://royalcartelchojnice.pl/",
-						"image": "https://royalcartelchojnice.pl/media/og-image.jpg",
+						"image": [
+							"https://royalcartelchojnice.pl/media/og-image.jpg",
+							"https://royalcartelchojnice.pl/media/hero.webp"
+						],
 						"logo": "https://royalcartelchojnice.pl/media/logo.svg",
 						"telephone": "+48730255325",
 						"email": "Royalcartelgch@gmail.com",
@@ -116,7 +124,7 @@
 									"@type": "Offer",
 									"itemOffered": {
 										"@type": "Service",
-										"name": "Mycie komplet — wnętrze i karoseria",
+										"name": "Mycie komplet – wnętrze i karoseria",
 										"provider": {
 											"@id": "https://royalcartelchojnice.pl/#firma"
 										}
@@ -180,7 +188,7 @@
 									"@type": "Offer",
 									"itemOffered": {
 										"@type": "Service",
-										"name": "Wulkanizacja — wymiana opon",
+										"name": "Wulkanizacja – wymiana opon",
 										"provider": {
 											"@id": "https://royalcartelchojnice.pl/#firma"
 										}
@@ -190,7 +198,7 @@
 									"@type": "Offer",
 									"itemOffered": {
 										"@type": "Service",
-										"name": "Renowacja felg — prostowanie, malowanie, regeneracja",
+										"name": "Renowacja felg – prostowanie, malowanie, regeneracja",
 										"provider": {
 											"@id": "https://royalcartelchojnice.pl/#firma"
 										}
@@ -228,6 +236,26 @@
 						"publisher": {
 							"@id": "https://royalcartelchojnice.pl/#firma"
 						}
+					},
+					{
+						"@type": "WebPage",
+						"@id": "https://royalcartelchojnice.pl/#strona-glowna",
+						"url": "https://royalcartelchojnice.pl/",
+						"name": "Royal Cartel Car Art – Auto Detailing i Ręczna Myjnia | Chojnice",
+						"description": "Ręczna myjnia, auto detailing, pranie tapicerki, korekta lakieru, wulkanizacja, renowacja felg, wynajem busów i pomoc drogowa w Chojnicach.",
+						"inLanguage": "pl-PL",
+						"isPartOf": {
+							"@id": "https://royalcartelchojnice.pl/#strona"
+						},
+						"about": {
+							"@id": "https://royalcartelchojnice.pl/#firma"
+						},
+						"primaryImageOfPage": {
+							"@type": "ImageObject",
+							"url": "https://royalcartelchojnice.pl/media/hero.webp",
+							"width": 2000,
+							"height": 1000
+						}
 					}
 				]
 			}
@@ -235,12 +263,7 @@
 	</head>
 	<body>
 		<div class="loader" id="loader" aria-hidden="true">
-			<img
-				src="media/logo.svg"
-				alt=""
-				width="150"
-				height="150"
-			/>
+			<img src="media/logo.svg" alt="" width="150" height="150" />
 		</div>
 
 		<header class="nav" id="nav">
@@ -248,7 +271,7 @@
 				<a
 					href="#top"
 					class="nav-logo"
-					aria-label="Royal Cartel Car Art — strona główna"
+					aria-label="Royal Cartel Car Art – strona główna"
 				>
 					<img
 						src="media/logo.svg"
@@ -263,15 +286,16 @@
 					id="nav-links"
 					aria-label="Nawigacja główna"
 				>
-					<a href="#o-nas"><span class="nav-num">01</span>O nas</a>
-					<a href="#jak-pracujemy"
-						><span class="nav-num">02</span>Jak pracujemy</a
+					<a href="#o-nas">O nas</a>
+					<a href="#jak-pracujemy">Jak pracujemy</a>
+					<a href="#cennik">Cennik</a>
+					<a href="#kontakt">Kontakt</a>
+					<a
+						href="tel:+48730255325"
+						class="nav-cta"
+						aria-label="Umów się – zadzwoń pod 730 255 325"
+						>Umów się</a
 					>
-					<a href="#cennik"><span class="nav-num">03</span>Cennik</a>
-					<a href="#kontakt"
-						><span class="nav-num">04</span>Kontakt</a
-					>
-					<a href="tel:+48730255325" class="nav-cta">730 255 325</a>
 				</nav>
 				<button
 					class="nav-burger"
@@ -290,34 +314,33 @@
 				<div class="hero-bg" aria-hidden="true"></div>
 				<div class="hero-inner">
 					<div class="hero-text">
-						<p class="eyebrow">
-							<span class="eyebrow-dot"></span>Chojnice · ul.
-							Kaszubska 1
-						</p>
 						<h1>
 							Auto detailing<br />i
-							<span class="accent">ręczna myjnia</span><br />w
-							Chojnicach
+							<span class="accent">inne usługi samochodowe</span
+							><br />w Chojnicach
 						</h1>
 						<p class="hero-lead">
-							Mycie kompleksowe, pranie tapicerki, korekta
-							lakieru, wulkanizacja i renowacja felg.
+							Mycie kompleksowe · Pranie tapicerki · Korekta
+							lakieru · Wulkanizacja i renowacja felg · Wynajem
+							busów · Pomoc drogowa
 						</p>
 						<div class="hero-cta">
-							<a href="tel:+48730255325" class="btn btn-accent"
-								>Zadzwoń: 730 255 325</a
+							<a
+								href="tel:+48730255325"
+								class="btn btn-accent"
+								aria-label="Zadzwoń pod 730 255 325"
+								>Zadzwoń</a
 							>
 							<a href="#cennik" class="btn btn-ghost"
 								>Zobacz cennik</a
 							>
 						</div>
-						<!-- liczby wpisane ręcznie — aktualizuj razem z wizytówką Google -->
 						<a
 							href="https://www.google.com/maps?cid=1770899805782467387"
 							target="_blank"
 							rel="noopener"
 							class="hero-rating"
-							aria-label="Ocena 5,0 w opiniach Google — zobacz wizytówkę"
+							aria-label="Ocena 5,0 w opiniach Google – zobacz wizytówkę"
 						>
 							<svg
 								class="hero-rating-g"
@@ -375,7 +398,7 @@
 				<div class="counters-inner">
 					<div class="counter">
 						<span class="counter-num"
-							><span data-count="1500">1500</span>+</span
+							><span data-count="500">500</span>+</span
 						>
 						<span class="counter-label">umytych aut</span>
 					</div>
@@ -387,31 +410,22 @@
 					</div>
 					<div class="counter">
 						<span class="counter-num"
-							><span data-count="300">300</span>+</span
-						>
-						<span class="counter-label">pranych tapicerek</span>
-					</div>
-					<div class="counter">
-						<span class="counter-num"
 							><span data-count="100">100</span>%</span
 						>
-						<span class="counter-label">ręcznej pracy</span>
+						<span class="counter-label">pasji</span>
 					</div>
 				</div>
 			</section>
 
 			<section class="section" id="o-nas">
 				<div class="section-inner">
-					<p class="eyebrow">
-						<span class="eyebrow-num">01</span>O nas
-					</p>
 					<div class="o-nas-grid">
 						<div class="o-nas-text">
 							<h2>Twoje auto w królewskich rękach</h2>
 							<p>
 								Royal Cartel Car Art to ręczna myjnia i studio
 								detailingu przy ul. Kaszubskiej 1 w Chojnicach.
-								Każde auto traktujemy indywidualnie — od
+								Każde auto traktujemy indywidualnie – od
 								dokładnego mycia karoserii i wnętrza, przez
 								pranie tapicerki i pielęgnację skór, po
 								wieloetapową korektę lakieru.
@@ -419,7 +433,7 @@
 							<p>
 								Zadbamy kompleksowo o Twoje auto: na miejscu
 								wykonamy też wulkanizację, wyprostujemy i
-								odnowimy felgi, a gdy trzeba — podstawimy busa
+								odnowimy felgi, a gdy trzeba – podstawimy busa
 								zastępczego albo przyjedziemy z pomocą drogową.
 							</p>
 							<ul class="o-nas-features">
@@ -428,7 +442,7 @@
 									<div>
 										<strong>Ręczna myjnia premium</strong
 										><span
-											>Bez agresywnych szczotek — mycie
+											>Bez agresywnych szczotek – mycie
 											ręczne, bezpieczne dla
 											lakieru.</span
 										>
@@ -451,7 +465,7 @@
 										<strong>Uczciwa wycena</strong
 										><span
 											>Cena zależy od wielkości i stanu
-											auta — wszystko ustalamy przed
+											auta – wszystko ustalamy przed
 											pracą.</span
 										>
 									</div>
@@ -460,10 +474,10 @@
 						</div>
 						<div class="o-nas-media">
 							<img
-								src="media/ph-o-nas.svg"
-								alt="Wnętrze studia detailingu Royal Cartel w Chojnicach"
-								width="1200"
-								height="900"
+								src="media/logo.svg"
+								alt="Logo Royal Cartel Car Art"
+								width="940"
+								height="940"
 								loading="lazy"
 							/>
 						</div>
@@ -473,16 +487,13 @@
 
 			<section class="section section-alt" id="jak-pracujemy">
 				<div class="section-inner">
-					<p class="eyebrow">
-						<span class="eyebrow-num">02</span>Jak pracujemy
-					</p>
 					<h2>Od wyceny do efektu wow</h2>
 					<ol class="steps">
 						<li class="step">
 							<span class="step-num">01</span>
 							<h3>Kontakt i wycena</h3>
 							<p>
-								Zadzwoń lub napisz — opisz auto i czego
+								Zadzwoń lub napisz – opisz auto i czego
 								potrzebujesz. Podamy cenę i umówimy dogodny
 								termin.
 							</p>
@@ -500,7 +511,7 @@
 							<span class="step-num">03</span>
 							<h3>Praca właściwa</h3>
 							<p>
-								Mycie, pranie, korekta czy renowacja — wszystko
+								Mycie, pranie, korekta czy renowacja – wszystko
 								ręcznie, z dbałością o każdy detal.
 							</p>
 						</li>
@@ -587,12 +598,9 @@
 
 			<section class="section" id="cennik">
 				<div class="section-inner">
-					<p class="eyebrow">
-						<span class="eyebrow-num">03</span>Cennik
-					</p>
 					<h2>Ile kosztują nasze usługi?</h2>
 					<p class="section-lead">
-						Cena zależy od wielkości auta — od małego auta po busa.
+						Cena zależy od wielkości auta – od małego auta po busa.
 						Mocno zabrudzone wnętrza wymagają większego nakładu
 						pracy i są wyceniane indywidualnie.
 					</p>
@@ -610,7 +618,7 @@
 								<li>Ręczne mycie karoserii</li>
 								<li>Mycie szyb bez smug i zacieków</li>
 								<li>
-									Felgi i opony — czyszczenie i nabłyszczanie
+									Felgi i opony – czyszczenie i nabłyszczanie
 								</li>
 								<li>Dokładne odkurzanie całego wnętrza</li>
 								<li>Czyszczenie i ochrona plastików</li>
@@ -670,7 +678,7 @@
 					</div>
 
 					<div class="extra-services">
-						<h3>Dodatkowe usługi — wycena indywidualna</h3>
+						<h3>Dodatkowe usługi – wycena indywidualna</h3>
 						<div class="extra-grid">
 							<div class="extra-card">
 								<h4>Wulkanizacja</h4>
@@ -695,9 +703,6 @@
 
 			<section class="section section-alt" id="kontakt">
 				<div class="section-inner">
-					<p class="eyebrow">
-						<span class="eyebrow-num">04</span>Kontakt
-					</p>
 					<h2>Zadzwoń i umów się</h2>
 					<div class="kontakt-grid">
 						<div class="kontakt-info">
@@ -792,7 +797,7 @@
 						</div>
 						<div class="kontakt-map">
 							<iframe
-								title="Mapa dojazdu — Royal Cartel Car Art, ul. Kaszubska 1, Chojnice"
+								title="Mapa dojazdu – Royal Cartel Car Art, ul. Kaszubska 1, Chojnice"
 								data-map-src="https://www.google.com/maps?q=Kaszubska+1,+89-600+Chojnice&output=embed"
 								loading="lazy"
 								referrerpolicy="no-referrer-when-downgrade"
@@ -1034,9 +1039,9 @@
 			</button>
 		</div>
 
-		<!-- core i wtyczka w tej samej wersji — rozjazd potrafi wywalić ScrollTrigger -->
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollToPlugin.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
