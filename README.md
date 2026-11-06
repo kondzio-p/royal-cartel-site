@@ -2,8 +2,6 @@
 
 Strona wizytówka dla klienta z Chojnic. Jedna strona z sekcjami, animacje przy przewijaniu i podstawy SEO.
 
-Strona: https://royalcartelchojnice.pl
-
 ## Co jest w środku
 
 - animacje GSAP i ScrollTrigger
